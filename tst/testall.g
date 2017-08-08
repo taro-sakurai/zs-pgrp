@@ -48,14 +48,14 @@ gap> y in soc[8] and not y in soc[7];
 true
 gap> z in soc[7] and not z in soc[6];
 true
-gap> w in soc[5] and not z in soc[4];
+gap> w in soc[5] and not w in soc[4];
 true
 gap> v := z + x*z + y*z + x*y*z + x*w + y*w + x*y*w;;
 gap> v in zs[7] and not v in cjs[7]; # explicit difference between zs from cjs
 true
 
-# G = 3_+^3
-gap> G := ExtraspecialGroup(3^3, "+");;
+# G = 3_+^(1+2)
+gap> G := ExtraspecialGroup(3^(1+2), "+");;
 gap> List(SocleSeries(G), Dimension);
 [ 1, 3, 7, 11, 16, 20, 24, 26, 27 ]
 gap> List(ZS(G), Dimension);
@@ -63,8 +63,8 @@ gap> List(ZS(G), Dimension);
 gap> List(CentralJenningsSpan(G), Dimension);
 [ 1, 3, 6, 8, 9, 9, 10, 10, 11 ]
 
-# G = 3_-^3
-gap> G := ExtraspecialGroup(3^3, "-");;
+# G = 3_-^(1+2)
+gap> G := ExtraspecialGroup(3^(1+2), "-");;
 gap> List(SocleSeries(G), Dimension);
 [ 1, 3, 6, 9, 12, 15, 18, 21, 24, 26, 27 ]
 gap> List(ZS(G), Dimension);
